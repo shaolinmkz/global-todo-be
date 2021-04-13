@@ -1,17 +1,17 @@
 {
-  "name": "todo-be-chl",
+  "name": "global-todo-be",
   "version": "1.0.0",
   "description": "test todo server",
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/bin/www.js",
-    "start-dev": "nodemon --exec babel-node ./server/bin/www.js",
+    "start:dev": "nodemon --exec babel-node ./server/bin/www.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build",
     "build": "rm -rf dist && mkdir dist && babel -d ./dist ./server -s"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shaolinmkz/todo-be-chl.git"
+    "url": "git+https://github.com/shaolinmkz/global-todo-be.git"
   },
   "keywords": [
     "Todo",
@@ -20,9 +20,9 @@
   "author": "Chukwuemeka Obiora Nwabuzor",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shaolinmkz/todo-be-chl/issues"
+    "url": "https://github.com/shaolinmkz/global-todo-be/issues"
   },
-  "homepage": "https://github.com/shaolinmkz/todo-be-chl#readme",
+  "homepage": "https://github.com/shaolinmkz/global-todo-be#readme",
   "dependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
@@ -30,6 +30,7 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.4",
     "@babel/register": "^7.0.0",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",

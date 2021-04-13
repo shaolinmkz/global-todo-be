@@ -1,43 +1,43 @@
-import '@babel/polyfill';
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import routes from './routes';
-import mongoose from './database';
+import "@babel/polyfill";
+import dotenv from "dotenv";
+import express from "express";
+import cors from "cors";
+import routes from "./routes";
+import mongoose from "./db";
+import responseConstruct from "./helpers/response";
 
 dotenv.config();
 
-// setup Mongoose
+// connect to database
 mongoose.config();
 
-// Set up the express app
 const app = express();
 
-// Enable CORS
 app.use(cors());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json({ type: 'application/json' }));
+app.use(express.text());
 
-// Parse incoming requests
-app.use(express.urlencoded());
-app.use(express.json());
+app.use("/api/v1", routes);
 
-// Routes
-app.use('/api/v1', routes);
-
-app.get('/', (req, res) => {
-  res.status(200).json({
-    method: req.method,
+app.get("/", (req, res) => responseConstruct({
+    req,
+    res,
+    status: 200,
     data: {
-      message: 'Welcome to todo saga'
-    }
+      message: "Welcome to global todo",
+    },
   })
-});
+);
 
-app.use((req, res) => {
-  res.status(404).json({
-    method: req.method,
-    data: { message: 'Oops! this route has no juice' }
+app.use((req, res) => responseConstruct({
+    req,
+    res,
+    status: 404,
+    data: {
+      message: "Oops! this endpoint has no power 🔋",
+    },
   })
-});
-
+);
 
 export default app;

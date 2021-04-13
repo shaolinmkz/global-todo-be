@@ -2,6 +2,6 @@ import app from '../app';
 
 const { log } = console;
 
-const port = process.env.PORT;
+const { PORT } = process.env
 
-app.listen(port, () => log(`🔌 Plugged on port ${port}`));
+app.listen(PORT, () => log(`⚡️ running on port ${PORT}`));
