@@ -2,6 +2,10 @@
 
 Just a simple global todo app
 
+### Deploy To
+
+[Heroku](https://global-todo.herokuapp.com/)
+
 ## Installation
 
 After cloning this repo, `cd` into it and on your command line run `npm install` to install the dependencies
@@ -58,7 +62,6 @@ npm run start:dev
         "completed": false,
         "createdAt": "2021-04-12T20:44:17.782Z",
         "updatedAt": "2021-04-12T20:44:17.782Z",
-        "__v": 0
       }
     ],
     "message": "Todos fetched successfully"
@@ -82,7 +85,6 @@ npm run start:dev
       "completed": false,
       "createdAt": "2021-04-12T20:44:17.782Z",
       "updatedAt": "2021-04-12T20:44:17.782Z",
-      "__v": 0
     },
     "message": "Fetched todo successfully"
   }
@@ -110,7 +112,6 @@ npm run start:dev
             "completed": false,
             "createdAt": "2021-04-13T00:33:22.576Z",
             "updatedAt": "2021-04-13T00:33:22.576Z",
-            "__v": 0
         },
         "message": "Todo created successfully"
     }
@@ -139,7 +140,6 @@ npm run start:dev
             "completed": true,
             "createdAt": "2021-04-13T00:33:22.576Z",
             "updatedAt": "2021-04-13T00:33:22.576Z",
-            "__v": 0
         },
         "message": "Todo updated successfully"
     }
@@ -159,7 +159,3 @@ npm run start:dev
   }
 }
 ```
-
-## Deploy To
-
-- [Heroku](#)

@@ -55,7 +55,10 @@ const fetchTodos = async (req, res) => {
       req,
       res,
       status: 200,
-      data: { todos: todos?.reverse() || [], message: "Todos fetched successfully" },
+      data: {
+        todos: todos?.reverse?.() || [],
+        message: "Todos fetched successfully",
+      },
     });
   } catch (error) {
     responseConstruct({
@@ -76,12 +79,11 @@ const fetchTodos = async (req, res) => {
  */
 const fetchSingleTodo = async (req, res) => {
   try {
-
     responseConstruct({
       req,
       res,
       status: 200,
-      data: { todo: req.prevTodo , message: "Fetched todo successfully" },
+      data: { todo: req.prevTodo, message: "Fetched todo successfully" },
     });
   } catch (error) {
     responseConstruct({
@@ -108,7 +110,7 @@ const updateTodo = async (req, res) => {
     await Todo.findOneAndUpdate(
       { _id: todoId },
       {
-        $set: setValues,
+        $set: { ...setValues, updatedAt: new Date() },
       },
       { upsert: true }
     );
