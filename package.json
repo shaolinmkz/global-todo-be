@@ -1,7 +1,7 @@
 {
   "name": "global-todo-be",
   "version": "1.0.0",
-  "description": "test todo server",
+  "description": "global todo server",
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/bin/www.js",
@@ -14,8 +14,7 @@
     "url": "git+https://github.com/shaolinmkz/global-todo-be.git"
   },
   "keywords": [
-    "Todo",
-    "Saga"
+    "Todo"
   ],
   "author": "Chukwuemeka Obiora Nwabuzor",
   "license": "MIT",

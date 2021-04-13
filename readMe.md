@@ -1,8 +1,9 @@
 # Global Todo
 
+<img src="todo.png" alt="global todo" width="50" />
 Just a simple global todo app
 
-### Deploy To
+## Deploy To
 
 [Heroku](https://global-todo.herokuapp.com/)
 
