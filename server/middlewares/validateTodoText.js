@@ -11,7 +11,7 @@ const validateTodoText = (todoText) => new Promise((resolve, reject) => {
 
     const errors = [];
 
-    if (!todoText) {
+    if (!todoText || !`${todoText}`.replace(/\s+/gm, "")) {
       errors.push(`${field} is required`);
     }
 
