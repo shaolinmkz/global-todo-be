@@ -16,7 +16,7 @@ const validateRequestBody = ({ todoText, completed }) =>
       field = "completed";
     }
 
-    if (todoText === undefined || todoText === null) {
+    if ([todoText === undefined, todoText === null, !`${todoText}`.replace(/\s+/gm, "")].includes(true)) {
       errors.push("todoText is required");
       field = "todoText";
     }
