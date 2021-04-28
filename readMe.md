@@ -148,7 +148,7 @@ npm run start:dev
 ```
 
 ```json
-// PUT
+// DELETE
 // http://localhost:4040/api/v1/todos/6074e6d2fcf5e02dc7c9260f
 
 // Response
